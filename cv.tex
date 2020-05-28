@@ -1,0 +1,154 @@
+\documentclass[11pt]{article}
+
+\usepackage{latexsym}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{nopageno}
+\usepackage{changepage}
+\usepackage{fontawesome}
+\usepackage[a4paper, top=0.2in, left=0.3in, right=0.4in, bottom=0.2in]{geometry}
+
+% Setup appearance of hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=RoyalBlue,
+    urlcolor=RoyalBlue,
+}
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Changing bullet styles
+%-------------------------
+% Custom commands
+\newcommand{\resumeSubItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-4pt}}
+  }
+}
+% All commands required to define list of job descriptions
+\newcommand{\jobDescriptionsListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\jobDescription}[5]{  % Args order [5]: Company name, location, position, time, project description
+  \vspace{-5pt}
+  \item
+    \begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}
+    \\*[3pt]
+    \begin{adjustwidth}{1pt}{}
+    #5\vspace{-7pt}
+    \end{adjustwidth}
+}
+
+\newcommand{\jobAchievement}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+\newcommand{\jobAchievementsListEnd}{\end{itemize}\vspace{-4pt}}
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+\begin{document}
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\huge Anna Zapaishchykova}  
+  \\*Baltimore, MA
+   & \href{mailto:anna.zapaishchykova@tum.de}{anna.zapaishchykova@tum.de}
+ \\
+  \href{https://www.linkedin.com/in/anna-zapaishchykova/}{linkedin.com/in/anna-zapaishchykova/} & +49 (159) 0147-10-32\\
+  
+  
+\end{tabular*}
+	\vspace{2pt}\\*{\textbf{Languages \& Software:} Python, C\#, Unity, Slicer 3D}
+
+%-----------EDUCATION-----------------
+\section{Education}
+\begin{itemize}[label={}]
+	\vspace{5pt}
+	\jobDescription
+	{John Hopkins University}{Baltimore, MA}
+	{Master thesis}{Mar 2020 - Now}
+	{}
+	\jobDescription
+	{Technical University of Munich}{Munich, Germany}
+	{Master of Science in Biomedical Computing}{Sep 2018 - Now}
+	{}
+	\jobDescription
+	{National Technical University of Ukraine "Kyiv Politechnic Institute"}{Kyiv, Ukraine}
+	{Bachelor of Science in Computer Engineering}{Sep 2013 - Jun 2017}
+	{}
+\end{itemize}
+%-----------EXPERIENCE-----------------
+\vspace{-10pt}
+\section{Experience}
+  \begin{itemize}[label={}]
+  	\vspace{5pt}
+  	\jobDescription
+  	{Research group MITI, Klinikum rechts der Isar, TUM}{Munich, Germany}
+  	{Research assistant}{Jan 2019 - Feb 2020}
+  	{Key tools: Keras, Python, Matlab, Docker, Git}
+      \begin{itemize}
+        \jobAchievement{Worked on phase prediction task in laparascopic surgery and implemented SoA \\*Deep Learning 
+        	architectures such as ResNetv2-50 into the operating room.}
+        \jobAchievement{Improved data collection in the operating room.}
+    \end{itemize}
+    \jobDescription
+      {CCI-interactive}{Kyiv, Ukraine}
+      {Robotic process automation engineer}{Mar 2018 - Sep 2018}
+      {Key tools: BluePrism, UIPath}
+      \begin{itemize}
+        \jobAchievement{Worked as a process automation engineer in one of the biggest banks in Ukraine.}
+        \jobAchievement{Certified BluePrism developer.}
+    \end{itemize}
+    \jobDescription
+      {1+1 Media}{Kyiv, Ukraine}
+      {Finance Analyst}{Nov 2016 - Mar 2018}
+      {Key tools: VBA, MS Excel, MySQL}
+      \begin{itemize}
+        \jobAchievement{Was responsible for the budget of one of the main TV-channels in Ukraine.}
+        \jobAchievement{Successfully created and maintained VBA scripts, reduced amount of routine work.}
+    \end{itemize}
+    \jobDescription
+      {Kodisoft}{Kyiv, Ukraine}
+      {Software Developer}{Jan 2015 - Nov 2016}
+      {Key tools: C\#, G-codes, CNC-machines programming}
+      \begin{itemize}
+        \jobAchievement{Created a software for generating machine G-codes.}
+        \jobAchievement{Successfully conducted "Internship-2016", interviewed prospective students.}
+    \end{itemize}
+  \end{itemize}
+
+%-----------Extracurricular Activities-----------------
+\section{Extracurricular Activities}
+    \subsection*{Hackathons}
+      \begin{itemize}
+        \resumeSubItem{AIBoost DataScientarium Kyiv 2017 - 1st place}
+          {Implemented DL-based online doctor chat with a team of 3 developers in 48 hours.}
+        \vspace{-8pt}
+      \end{itemize}
+    \subsection*{Certifications \& Scholarships}
+        \begin{itemize}
+        	\resumeSubItem{PROMOS Scholarship 2020}{Awarded for a stay abroad for writing Master thesis.}
+        	\resumeSubItem{MedInnovate program graduate 2020}{Learned how to successfully identify unmet clinical needs within the clinical routine, as a result created a VR product for Multiple Sclerosis patients \url{http://www.viz.care}}
+            \resumeSubItem{Lviv Data Science Summer School 2017}{Completed intensive 2 week training in Data Science, as a final project worked on "Alzheimer disease conversion prediction".}
+        \vspace{-8pt}
+        \end{itemize}
+    \subsection*{Other}
+        \begin{itemize}
+            \resumeSubItem{Languages}
+              {English(TOEFL-98), Ukrainian(bilingual), Russian(bilingual), German(B2) }
+            \resumeSubItem{Interests}{Medical field, neurodegenerative diseases and computer aided procedures}
+        \end{itemize}
+%-------------------------------------------
+\end{document}
